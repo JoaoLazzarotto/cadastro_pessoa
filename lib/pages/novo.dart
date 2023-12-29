@@ -33,10 +33,10 @@ class _NovoState extends State<Novo> {
 
   _getTextField(
       {required String label,
-      required String hint,
-      required final controller,
-      List<TextInputFormatter>? textInputFormatterList,
-      String? Function(String? value)? validator}) {
+        required String hint,
+        required final controller,
+        List<TextInputFormatter>? textInputFormatterList,
+        String? Function(String? value)? validator}) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
@@ -136,7 +136,7 @@ class _NovoState extends State<Novo> {
                         elevation: 5.0,
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              BorderRadius.circular(20.0), //<-- SEE HERE
+                          BorderRadius.circular(20.0), //<-- SEE HERE
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),

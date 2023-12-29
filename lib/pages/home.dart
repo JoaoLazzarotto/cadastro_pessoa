@@ -51,7 +51,6 @@ class _HomeState extends State<Home> {
     });
   }
 
-
   _remover(Pessoa pessoa){
     _pessoaDao.excluir(pessoa).then((value) {
       pessoaRemovida = pessoa;
@@ -59,8 +58,8 @@ class _HomeState extends State<Home> {
       _updateLista();
       ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text('Pessoa removida!', style: TextStyle(fontSize: 20),),
-            backgroundColor: Colors.grey[700],
+            content: Text('Pessoa removida!'),
+            backgroundColor: Colors.grey,
             action: SnackBarAction(
               label: 'Desfazer',
               textColor: Colors.black,
@@ -68,7 +67,7 @@ class _HomeState extends State<Home> {
                 _salvar(pessoaRemovida!);
               },
             ),
-            duration: const Duration(seconds: 5),
+            duration: const Duration(seconds: 3),
           )
       );
     });
@@ -130,7 +129,7 @@ class _HomeState extends State<Home> {
     print(_listaPessoas);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cadastro Pessoas'),
+        title: const Text('Cad Pessoas'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _clickAdd,
